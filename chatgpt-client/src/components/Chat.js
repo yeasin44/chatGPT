@@ -37,28 +37,29 @@ const Chat = () => {
     setChatLog([]);
   };
   return (
-    <div className="bg-slate-800 w-full h-full">
-      <div>
-        <Link to="/">
-          <img src={logo} alt="" className="w-40 ml-24" />
-        </Link>
-      </div>
+    <div className="bg-slate-800 w-full h-full relative">
+      <Link to="/">
+        <div>
+          <img to="/" src={logo} alt="ai-logo" className="w-40 ml-24" />
+        </div>
+      </Link>
+
       <h1 className="text-2xl text-white font-bold text-center  absolute m-auto left-[43%] top-0 mt-12">
         Ask any questions
       </h1>
-      <div className="">
+      <div className="relative">
         <div className="">
           {chatLog?.map((message, index) => (
             <Translate key={index} message={message} />
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-12 ">
           <div
             className="w-14 h-14 border flex justify-center items-center mr-2 rounded cursor-pointer hover:bg-sky-400"
             onClick={clearMessage}
           >
-            <div className="text-white font-bold text-4xl hover:scale-125 ">
+            <div className="text-white font-bold text-4xl hover:scale-125">
               +
             </div>
           </div>
