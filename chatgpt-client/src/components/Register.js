@@ -28,7 +28,7 @@ const Register = () => {
   return (
     <div className="bg-slate-900 h-screen">
       <div className="flex justify-center items-center">
-        <div className="w-96 bg-slate-700 h-80 mt-40 rounded-lg">
+        <div className="w-96  bg-slate-700 h-80 mt-40 rounded-lg m-24">
           <form
             onSubmit={handleCreateUser}
             className="py-2 p-6 flex flex-col justify-center items-center"
@@ -42,7 +42,7 @@ const Register = () => {
                 name="email"
                 type="email"
                 placeholder="email"
-                className="p-1 rounded w-80"
+                className="p-1 rounded lg:w-80 md:w-80 w-60"
                 required
               />
             </div>
@@ -51,7 +51,7 @@ const Register = () => {
                 name="password"
                 type="password"
                 placeholder="password"
-                className="p-1 rounded w-80"
+                className="p-1 rounded lg:w-80 md:w-80 w-60"
                 required
               />
             </div>
